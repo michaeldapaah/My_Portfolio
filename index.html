@@ -1,0 +1,267 @@
+<!DOCTYPE html><html lang="en"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+  <title>My Website</title>
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+  <script>
+    let playCount = 0; // Variable to keep track of how many times the video has played
+        const maxPlays = 2; // Number of times the video should play
+
+        function playVideo() {
+            
+            if (playCount < maxPlays) {
+                const video = document.getElementById('myVideo');
+                video.play(); // Play the video again if the max play count isn't reached
+                playCount++;
+            }
+        }
+        function handleVideoEnd() {
+            playVideo(); // Call the playVideo function when the video ends
+        }
+
+        function setVolume() {
+            const video = document.getElementById('myVideo');
+            video.volume = 0.1; // Set the volume to 30%
+        }
+        document.addEventListener('keydown', function(event) {
+            if (event.code === 'Space') {
+                event.preventDefault(); // Prevent default spacebar behavior (like scrolling)
+                playVideo(); // Play the video when spacebar is pressed
+            }
+        });
+        window.onload = function() {
+            video.currentTime = 0;
+            setVolume();
+            playVideo(); // Start playing the video when the page loads
+            
+        };
+    </script>
+</head>
+
+<body>
+  <!-- Header -->
+  <section id="header">
+    <div class="header container">
+      <div class="nav-bar">
+        <div class="brand">
+          <a href="#hero">
+            <h1><span>M</span>ichael <span>T</span>eye <span>Y</span>aw <span>D</span>apaah</h1>
+          </a>
+        </div>
+        <div class="nav-list">
+          <div class="hamburger">
+            <div class="bar"></div>
+          </div>
+          <ul>
+            <li><a href="#hero" data-after="Home">Home</a></li>
+            <li><a href="#services" data-after="Service">Services</a></li>
+            <li><a href="#projects" data-after="Projects">Projects</a></li>
+            <li><a href="#about" data-after="About">About</a></li>
+            <li><a href="#contact" data-after="Contact">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End Header -->
+
+
+  <!-- Hero Section  -->
+  <section id="hero">
+    <div class="hero container">
+      <div>
+        <h1>Hello, <span></span></h1>
+        <h1>My Name is <span></span></h1>
+        <h1>Michael<span></span></h1>
+        <a href="#projects" type="button" class="cta">Portfolio</a>
+      </div>
+    </div>
+  </section>
+  <!-- End Hero Section  -->
+
+  <!-- Service Section -->
+  <section id="services">
+    <div class="services container">
+      <div class="service-top">
+        <h1 class="section-title">Serv<span>i</span>ces</h1>
+        <p>I am a frontend developer and UI/UX designer with a passion for creating seamless, responsive websites and applications. My journey started in graphic design, but I have evolved into a full-stack frontend developer, using technologies like HTML, CSS, JavaScript, and React to bring my designs to life. I focus on clean, user-centric design and development to ensure that every user interaction is intuitive and enjoyable. Certified in Adobe Photoshop,
+           I also offer expert photo editing and manipulation services, ensuring high-quality results that align with client
+           needs and brand vision. Whether working on freelance projects or ongoing design support, my goal is to deliver
+           creative solutions that stand out and drive success.</p>
+      </div>
+      <div class="service-bottom">
+        <div class="service-item">
+          <div class="icon"><img src="images/services.png"></div>
+          <h2>Branding &amp; Logo Design:</h2>
+          <p>I specialize in crafting unique and memorable logos that resonate with your brand's identity. Whether you are launching a new brand or rebranding an existing one, I deliver designs that capture your vision and stand out in the marketplace.</p>
+        </div>
+        <div class="service-item">
+          <div class="icon"><img src="images/services.png"></div>
+          <h2> Frontend Development:</h2>
+          <p>I specialize in frontend development with HTML5, CSS3, JavaScript, and responsive design using CSS Grid, Flexbox, and media queries. I also have experience in UI/UX design with tools like Figma and Adobe Illustrator and am skilled in version control with Git and GitHub.
+          </p>
+        </div>
+        <div class="service-item">
+          <div class="icon"><img src="images/services.png"></div>
+          <h2><p></p>UI/UX <p></p> Design</h2>
+          <p>I offer user interface design services focused on creating intuitive and aesthetically pleasing digital experiences. My work ensures that your apps and websites are not only functional but also provide an excellent user experience</p>
+        </div>
+        <div class="service-item">
+          <div class="icon"><img src="images/services.png"></div>
+          <h2>Photo / Video Editing</h2>
+          <p>As an Adobe Photoshop-certified professional, I provide expert photo editing, video editing and manipulation services. From retouching images, video creation/editing, to creating intricate photo composites, I deliver results that meet your exact specifications</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End Service Section -->
+
+  <!-- Projects Section -->
+  <section id="projects">
+    <div class="projects container">
+      <div class="projects-header">
+        <h1 class="section-title">Recent <span>Projects</span></h1>
+      </div>
+      <div class="all-projects">
+        <div class="project-item">
+          <div class="project-info">
+            <h1>Project 1</h1>
+            <h2>CZO TECHNOLOGIES LOGO DESIGN</h2>
+            <p>I created the logo for CZO Technologies, a company specializing in CCTV installation and networking. The logo was designed to convey the company’s focus on security and connectivity, blending modern and professional design elements. Through collaboration with the team, the final logo was developed to reflect CZO Technologies' commitment to innovation and quality in their field.</p>
+          </div>
+          <div class="project-img">
+            <img src="images/CZO_Technologies.png" alt="img">
+          </div>
+        </div>
+        <div class="project-item">
+          <div class="project-info">
+            <h1>Project 2</h1>
+            <h2>Portfolio website</h2>
+            <p>This portfolio showcases my work as a frontend developer and UI/UX designer, highlighting my skills in HTML5, CSS3, JavaScript, and responsive design. It features a collection of projects where I combine my design expertise with frontend development to create intuitive, visually appealing, and functional websites and applications.</p>
+          </div>
+          <div class="project-img">
+            <img src="images\portpic.PNG" alt="img">
+          </div>
+        </div>
+        <div class="project-item">
+          <div class="project-info">
+            <h1>Project 3</h1>
+            <h2>Flyer Design for Micstar Studios</h2>
+            <p>I designed a promotional flyer for Micstar Studios, a local company specializing in UI/UX design, video editing, graphic design, and website design. The flyer aimed to showcase the studio’s diverse range of services while maintaining a cohesive and visually appealing layout. By using vibrant colors and modern typography, the flyer effectively communicated Micstar Studios’ creativity and professionalism, helping to attract new clients and enhance brand visibility.</p>
+          </div>
+          <div class="project-img">
+            <img src="images/micstar%20flyer%20psd.png" alt="img">
+          </div>
+        </div>
+        <div class="project-item">
+          <div class="project-info">
+            <h1>Project 4</h1>
+            <h2>Video Editing for Global Crises Presentation</h2>
+            <p>I worked on a video editing project centered around global crises, which was presented to a renowned organization. The project involved compiling and editing footage, incorporating graphics, and ensuring a cohesive narrative to effectively convey the gravity of the issues. The final video was polished and impactful, successfully engaging the audience and supporting the presentation's objectives.</p>
+          </div>
+          <div class="project-img video">
+            <video id="myVideo" width="640" height="360" autoplay="" controls="" onended="handleVideoEnd()">
+              <source src="media/GlobalCrises.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+          </video>
+          </div>
+        </div>
+        <div class="project-item">
+          <div class="project-info">
+            <h1>Project 5</h1>
+            <h2>Logo Design for KesMez Designs</h2>
+            <p>I created a logo for KesMez Designs, a fashion brand known for its unique and stylish designs. The logo was crafted to embody the elegance and creativity of the brand, with a focus on modern aesthetics and sophisticated typography. The final design effectively represents KesMez Designs' identity, making it a standout symbol in the fashion industry.</p>
+          </div>
+          <div class="project-img">
+            <img src="images/kes.jpg" alt="img">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End Projects Section -->
+
+  <!-- About Section -->
+  <section id="about">
+    <div class="about container">
+      <div class="col-left">
+        <div class="about-img">
+          <img src="images/cover2.jpg" alt="img">
+        </div>
+      </div>
+      <div class="col-right">
+        <h1 class="section-title">About <span>me</span></h1>
+        <h2>Frontend Developer &amp; UI/UX Designer, Graphic Designer / Multimedia Specialist</h2>
+        <p>I am a passionate frontend developer with strong skills in HTML5, CSS3, and JavaScript, and a background in UI/UX design. I specialize in creating responsive, user-friendly websites and applications, blending design expertise with frontend development. Currently, I am learning React to further enhance my development skills, while continuing to hone my design abilities using tools like Figma, Adobe Illustrator, and Photoshop. Additionally, I have experience in video editing, where I bring creative content to life for impactful presentations and multimedia projects..</p>
+        <a href="https://drive.google.com/file/d/1JvBBawCwv0uSELJYpooigD8hEewq7Ho6/view?usp=sharing" target="_blank" class="cta">Download Resume</a>
+      </div>
+    </div>
+  </section>
+  <!-- End About Section -->
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <div class="contact container">
+      <div>
+        <h1 class="section-title">Contact <span>info</span></h1>
+        <p style="text-align: center;">I am always open to new opportunities in frontend development and UI/UX design. Whether you’re looking for a designer who can also develop or a frontend developer with a keen eye for design, I’d love to collaborate with you on exciting projects. Reach out today!</p>
+      </div>
+      <div class="contact-items">
+        <div class="contact-item">
+          <div class="icon"><img src="images/phone.png"></div>
+          <div class="contact-info">
+            <h1>Phone</h1>
+            <h2>+233 595 169 020</h2>
+            <h2>+233 509 438 950</h2>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="icon"><img src="images/new-post.png"></div>
+          <div class="contact-info">
+            <h1>Email</h1>
+            <h2>michaeldapaah0@gmail.com</h2>
+            <h2>michaellildaps100@gmail.com</h2>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="icon"><img src="images/map-marker.png"></div>
+          <div class="contact-info">
+            <h1>Address</h1>
+            <h2>Tema, Accra, Ghana.</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End Contact Section -->
+
+  <!-- Footer -->
+  <section id="footer">
+    <div class="footer container">
+      <div class="brand">
+        <h1><span>M</span>ichael <span>T</span>eye <span>Y</span>aw <span>D</span>apaah</h1>
+      </div>
+      <h2>Your Very Best Choice</h2>
+      <div class="social-icon">
+        <div class="social-item">
+          <a href="https://web.facebook.com/mike.dapaah.7/" target="_blank"><img src="images/facebook-new.png"></a>
+        </div>
+        <div class="social-item">
+          <a href="https://www.instagram.com/m_dapaah_lildaps/" target="_blank"><img src="images/instagram-new.png"></a>
+        </div>
+        <div class="social-item">
+          <a href="https://x.com/MLildaps" target="_blank"><img src="images/x.png"></a>
+        </div>
+        <div class="social-item">
+          <a href="https://github.com/michaeldapaah" target="_blank"><img src="images/github.png"></a>
+        </div>
+      </div>
+      <p>Copyright © 2024 Michael. All rights reserved</p>
+    </div>
+  </section>
+  <!-- End Footer -->
+  <script src="js/app.js"></script>
+
+
+</body></html>
